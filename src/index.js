@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Message from './Components/Message';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const saludar = () => console.log('Hola desconocido!!!')
+
+// COMPONENTE CONTENEDOR
 root.render(
   <React.StrictMode>
-    <App />
+    <App name='Coderhouse' app='Mi aplicacion con React' saludaPapa={saludar}>
+      Message
+    </App>
+    {/* <App name='Coderhouse' app='Mi aplicacion con React' saludaPapa={saludar}>
+      <Message />
+    </App>
+    <App name='Coderhouse' app='Mi aplicacion con React' saludaPapa={saludar}>
+      <h1>Message</h1>
+    </App> */}
   </React.StrictMode>
 );
 
